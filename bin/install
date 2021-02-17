@@ -18,11 +18,11 @@ tmp_dir=$(mktemp -d -t eksctl_XXXX)
 cleanup() {
   rm -rf ${tmp_dir}
 }
-trap cleanup INT TERM EXIT
+#trap cleanup INT TERM EXIT
 
 install() {
   local version=$1
-  local install_path="$2//bin/"
+  local install_path="$2/bin"
   local bin_path="${install_path}/eksctl"
 
   local download_url
